@@ -89,9 +89,9 @@ const Login: React.FC<LoginProps> = ({ setIsLoggedIn }) =>{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#f0f0f0",
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     text: {
         fontSize: 16,
@@ -113,7 +113,13 @@ const styles = StyleSheet.create({
         color: "red",
     },
     button: {
-        backgroundColor: "blue"
+        backgroundColor: '#008CBA',
+        color: '#fff',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 5,
+        fontSize: 16,
+        marginTop: 20,
     },
     buttonText: {
         fontSize: 16,
