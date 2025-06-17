@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import Login from '../components/login';
 import Welcome from '../components/welcome';
+import Navbar from '../components/navbar';
 
 export default function App() {
     

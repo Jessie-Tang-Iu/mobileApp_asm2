@@ -1,11 +1,16 @@
 import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
+import Navbar from "./navbar";
+import { useEffect } from "react";
+import { useRouter } from "expo-router";
 
 
 
 export default function Welcome() {
+    const router = useRouter();
+    useEffect(()=>router.push("/tab"),[])
     return(
         <View>
-            <Text>Welcome</Text>
+            <Text>Welcome to My New App</Text>
         </View>
     );
 }
