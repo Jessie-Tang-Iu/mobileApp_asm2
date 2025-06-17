@@ -1,4 +1,3 @@
-
 import { StyleSheet, Text, View, TouchableOpacity, Pressable } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
@@ -44,5 +43,5 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         fontSize: 16,
         marginTop: 20,
-    },
+    }
 })
