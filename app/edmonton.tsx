@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import CityDetails from '../../components/cityDetails';
+import CityDetails from '../components/cityDetails';
 
 export default function EdmontonScreen() {
     return (
@@ -26,6 +26,7 @@ export default function EdmontonScreen() {
 
 const styles = StyleSheet.create({
     container: {
+        
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',

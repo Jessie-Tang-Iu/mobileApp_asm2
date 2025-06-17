@@ -1,16 +1,20 @@
-import { Tabs } from 'expo-router';
+import { Stack , Tabs} from 'expo-router';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { constantStyles } from '../components/constants';
+import { View, Image } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'; 
 import React from 'react';
-import { Ionicons } from '@expo/vector-icons'; // Import your icon library
 
-export default function TabLayout() {
+export default function Layout() {
     return (
+
         <Tabs
             screenOptions={{
                 tabBarShowLabel: true,
                 headerShown: false,
             }}>
             <Tabs.Screen
-                name="index"
+                name="calgary"
                 options={{
                     title: 'Calgary',
                     tabBarIcon: ({ color, size }) => (
