@@ -11,7 +11,6 @@ export default function Welcome() {
     const [profiles, setProfiles] = useState<User[]>([]);
     const [email, setEmail] = useState<string>('');
     const [user, setUser] = useState<any>(null);
-    // const [error, setError] = useState<string | null>(null);
 
     const router = useRouter();
 

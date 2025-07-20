@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import CityDetails from '../components/cityDetails';
+import CityDetails from '../../components/cityDetails';
 
-export default function EdmontonScreen() {
+export default function Edmonton() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Welcome to Edmonton</Text>

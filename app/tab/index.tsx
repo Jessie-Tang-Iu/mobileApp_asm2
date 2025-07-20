@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import CityDetails from '../components/cityDetails';
+import CityDetails from '../../components/cityDetails';
 
-export default function CalgaryScreen() {
+export default function Calgary() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Welcome to Calgary</Text>
@@ -26,7 +26,6 @@ export default function CalgaryScreen() {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 80,
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',

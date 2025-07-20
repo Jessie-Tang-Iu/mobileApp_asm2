@@ -1,17 +1,13 @@
 import { StyleSheet, Text, View, TouchableOpacity, Pressable } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
 import { useState } from 'react';
-import Login from '../components/login';
 import Welcome from '../components/welcome';
-import SupabaseAuth from '../components/supabase_signin';
 
 export default function App() {
 
-    const  [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
-
     return (
         <View style={styles.container}>
-            { isLoggedIn && <Welcome /> }
+            <Welcome /> 
         </View>
     );
 }
