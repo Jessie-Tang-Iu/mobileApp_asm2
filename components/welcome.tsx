@@ -10,7 +10,6 @@ export default function Welcome() {
     const [loading, setLoading] = useState<boolean>(false);
     const [profiles, setProfiles] = useState<User[]>([]);
     const [email, setEmail] = useState<string>('');
-    const [user, setUser] = useState<any>(null);
 
     const router = useRouter();
 
@@ -30,15 +29,7 @@ export default function Welcome() {
     useEffect(() => {
         fetchAllUsers();
         getCurrentSession();
-        fetchAllUsers();
     }, []);
-
-    useEffect(() => {
-        if (email) {
-            const foundUser = profiles.find((profile) => profile.email === email);
-            setUser(foundUser);
-        }
-    }, [email]);
 
     const getCurrentSession = async () => {
         try {
@@ -57,7 +48,6 @@ export default function Welcome() {
     const handleSignOut = async () => {
         try {
             await signOut();
-            setUser(null);
             router.push('/sign_in');
         } catch (error) {
             console.error('Error signing out: ', error);
@@ -67,6 +57,9 @@ export default function Welcome() {
 
     return (
         <View style={styles.container}>
+            <TouchableOpacity onPress={handleSignOut} style={{marginBottom: 20}}>
+                <Text style={{color: 'blue', textAlign: 'right'}}>Sign Out</Text>
+            </TouchableOpacity>
             {loading ? (
                 <ActivityIndicator size="large" color="#0000ff" />
             ) : (
@@ -77,9 +70,6 @@ export default function Welcome() {
                         Welcome, {item.first_name} {item.last_name}!
                     </Text>
                 )))}
-            <TouchableOpacity onPress={handleSignOut} style={{ marginTop: 20, padding: 10, backgroundColor: '#007BFF', borderRadius: 5 }}>
-                <Text style={{ color: 'white', fontWeight: 'bold' }}>Sign Out</Text>
-            </TouchableOpacity>
         </View>
     );
 }
