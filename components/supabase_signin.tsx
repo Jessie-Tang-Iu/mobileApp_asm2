@@ -17,10 +17,10 @@ const SupabaseAuth = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const router = useRouter();
-    const mainUser: User = {
-        first_name: 'Lam',
-        last_name: 'Dao',
-        email: 'lam.dao@edu.sait.ca',
+    const newUser: User = {
+        first_name: '',
+        last_name: '',
+        email: '',
     };
 
     const registerUser = async () => {
@@ -28,7 +28,6 @@ const SupabaseAuth = () => {
             setError("All fields are required");
             return;
         }
-        console.log("Registering user:", mainUser);
         setLoading(true);
         setError(null);
         let newUser = {
@@ -40,7 +39,7 @@ const SupabaseAuth = () => {
             await signUp(email, password);
             
             setIsAuthenticated(true);
-            await addUser(mainUser);
+            await addUser(newUser);
         
         } catch (err: any) {
             setError(err instanceof Error ? err.message : "Registration failed");
